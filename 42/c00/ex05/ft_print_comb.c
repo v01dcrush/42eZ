@@ -6,32 +6,26 @@
 /*   By: andrkara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:11:56 by andrkara          #+#    #+#             */
-/*   Updated: 2025/10/13 07:01:45 by andrkara         ###   ########.fr       */
+/*   Updated: 2025/10/13 22:02:41 by andrkara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
 void	ft_print_comb(void)
 {
 	char	a;
 	char	b;
 	char	c;
-	int	i;
 
-	i = 0;
-	while (i <= 789)
+	a = '0';
+
+	while (a <= 789)
 	{
-		a = (i - (i % 100)) / 100;
-		b = ((i % 100) - (i % 10)) / 10;
-		c = i % 10;
-		i = (a * 100) + (b * 10) + c;		
+		a = i / 100;
+		b = (i / 10) % 10;
+		c = i % 10;		
 		if (b < a)
 		{
 			b = a + 1;
@@ -42,20 +36,23 @@ void	ft_print_comb(void)
 		}
 		else
 		{
-			c++;
+			a++;
+			b = a + 1;
+			c = b + 1;
 		}
-		ft_putchar(a);
-		ft_putchar(b);
-		ft_putchar(c);
+		i = (a * 100) + (b * 10) + c;
+		write (1,"%d" &a, 1);
+		write (1,"%d" &b, 1);
+		write (1,"%d" &c, 1);
 		i++;
 	}
 	if (i == 789)
 	{
-		ft_putchar('\n');
+		write (1, "\n", 1);
 	}
 	else
 	{
-		ft_putchar(',');
+		write (1, ", ", 2);
 	}
 }
 
