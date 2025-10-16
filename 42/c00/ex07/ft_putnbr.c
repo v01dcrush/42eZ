@@ -23,8 +23,8 @@ void ft_putnbr(int nb)
 	ft_putchar(nb % 10 + '0');	
 }
 
-int	main()
+/*int	main()
 {
 	ft_putnbr (INT_MIN);
 	return 0;
-}
+}*/
