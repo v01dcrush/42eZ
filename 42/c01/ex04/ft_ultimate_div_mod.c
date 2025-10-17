@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: andrkara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/17 21:17:57 by andrkara          #+#    #+#             */
+/*   Updated: 2025/10/17 21:20:59 by andrkara         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-        write (1, &c, 1);
+	write (1, &c, 1);
 }
 
 void	ft_ultimate_div_mod(int *a, int *b)
-{	
-	int c;
+{
+	int	c;
 
 	c = *a / *b;
 	*b = *a % *b;

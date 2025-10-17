@@ -6,18 +6,18 @@
 /*   By: andrkara <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:54:38 by andrkara          #+#    #+#             */
-/*   Updated: 2025/10/16 23:01:43 by andrkara         ###   ########.fr       */
+/*   Updated: 2025/10/17 21:16:34 by andrkara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-        write (1, &c, 1);
+	write (1, &c, 1);
 }
 
 void	ft_ft(int *nbr)
 {
-	*nbr = 42; 
+	*nbr = 42;
 }

@@ -1,35 +1,60 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: andrkara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/17 21:33:48 by andrkara          #+#    #+#             */
+/*   Updated: 2025/10/18 03:10:04 by andrkara         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_putchar(char c)
+//#include <stdio.h>
+
+void	ft_sort_int_tab(int *tab, int size)
 {
-        write (1, &c, 1);
-}
+	int	temp;
+	int	i;
+	int	j;
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
-{	
-	int c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
+	i = 0;
+	while (i < size)
+	{
+		j = i + 1;
+		while (j < size)
+		{
+			if (tab[j] < tab[i])
+			{
+				temp = tab[i];
+				tab[i] = tab[j];
+				tab[j] = temp;
+			}
+			j++;
+		}
+		i++;
+	}
 }
 
 /*int	main()
 {
-	int	d;
-	int	e;
-	int	*a;
-	int	*b;
+	int	i;
+	int	b;
+	
+	b = 7;
 
-	d = 4;
-	e = 3;
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
-	write(1, " ", 1);
-	a = &d;
-	b = &e;
-	ft_swap(a, b);
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	int a[] = {9, 42, -13, 2, 7, 87, -47}; 
+	
+	ft_sort_int_tab(a, b);
+
+	i = 0;
+	while (i < b)
+	{
+		if (i != b - 1)
+			printf("%d, ", a[i]);
+		else
+			printf("%d", a[i]);
+		i++;
+	}
 	return 0;
 }*/

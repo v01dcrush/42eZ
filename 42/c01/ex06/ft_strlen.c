@@ -1,35 +1,34 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: andrkara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/17 21:22:55 by andrkara          #+#    #+#             */
+/*   Updated: 2025/10/18 03:33:10 by andrkara         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_putchar(char c)
+//#include <stdio.h>
+
+int	ft_strlen(char *str)
 {
-        write (1, &c, 1);
-}
+	int	i;
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
-{	
-	int c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 /*int	main()
 {
-	int	d;
-	int	e;
-	int	*a;
-	int	*b;
-
-	d = 4;
-	e = 3;
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
-	write(1, " ", 1);
-	a = &d;
-	b = &e;
-	ft_swap(a, b);
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	char	b[] = "Hello neighbours";
+	int a;
+	a = ft_strlen(b);
+	printf("%d", a);
 	return 0;
 }*/

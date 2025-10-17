@@ -1,35 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: andrkara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/17 21:22:55 by andrkara          #+#    #+#             */
+/*   Updated: 2025/10/18 03:34:20 by andrkara         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void    ft_putchar(char c)
-{
-        write (1, &c, 1);
-}
-
 void	ft_putstr(char *str)
-{	
-	int c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
+{
+	int	i;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
 
 /*int	main()
 {
-	int	d;
-	int	e;
-	int	*a;
-	int	*b;
-
-	d = 4;
-	e = 3;
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
-	write(1, " ", 1);
-	a = &d;
-	b = &e;
-	ft_swap(a, b);
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	char	b[] = "Hello neighbour";
+	ft_putstr(b);	
 	return 0;
 }*/

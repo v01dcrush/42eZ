@@ -1,35 +1,45 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: andrkara <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/17 21:33:48 by andrkara          #+#    #+#             */
+/*   Updated: 2025/10/17 23:04:27 by andrkara         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_putchar(char c)
+//#include <stdio.h>
+
+void	ft_rev_int_tab(int *tab, int size)
 {
-        write (1, &c, 1);
-}
+	int	c;
+	int	i;
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
-{	
-	int c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
+	i = 0;
+	while (i < size / 2)
+	{
+		c = tab[i];
+		tab[i] = tab[size - i - 1];
+		tab[size - i - 1] = c;
+		i++;
+	}
 }
 
 /*int	main()
 {
-	int	d;
-	int	e;
-	int	*a;
-	int	*b;
-
-	d = 4;
-	e = 3;
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
-	write(1, " ", 1);
-	a = &d;
-	b = &e;
-	ft_swap(a, b);
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	int	i;
+	int	b;
+	
+	i = 0;
+	b = 7;
+	int a[] = {9, 42, -13, 2, 7, 87, -47}; 
+	ft_rev_int_tab(a, b);
+	while (i < b)
+	{
+		printf("%d, ", a[i]);
+		i++;
+	}
 	return 0;
 }*/
