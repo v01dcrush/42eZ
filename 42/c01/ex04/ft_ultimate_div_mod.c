@@ -5,31 +5,26 @@ void    ft_putchar(char c)
         write (1, &c, 1);
 }
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_ultimate_div_mod(int *a, int *b)
 {	
 	int c;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	c = *a / *b;
+	*b = *a % *b;
+	*a = c;
 }
 
 /*int	main()
 {
-	int	d;
-	int	e;
-	int	*a;
-	int	*b;
+	int a, b;
 
-	d = 4;
-	e = 3;
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	a = 4;
+	b = 3;
+	ft_putchar('0' + a);
+	ft_putchar('0' + b);
 	write(1, " ", 1);
-	a = &d;
-	b = &e;
-	ft_swap(a, b);
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	ft_ultimate_div_mod(&a, &b);
+	ft_putchar('0' + a);
+	ft_putchar('0' + b);
 	return 0;
 }*/

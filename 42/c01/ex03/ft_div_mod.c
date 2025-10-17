@@ -7,29 +7,23 @@ void    ft_putchar(char c)
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {	
-	int c;
-
-	c = *a;
-	*a = *b;
-	*b = c;
+	*div = a / b;
+	*mod = a % b;
 }
 
 /*int	main()
 {
-	int	d;
-	int	e;
-	int	*a;
-	int	*b;
+	int a, b, *div, *mod;
 
-	d = 4;
-	e = 3;
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	a = 4;
+	b = 3;
+	div = &a;
+	mod = &b;
+	ft_putchar('0' + a);
+	ft_putchar('0' + b);
 	write(1, " ", 1);
-	a = &d;
-	b = &e;
-	ft_swap(a, b);
-	ft_putchar('0' + d);
-	ft_putchar('0' + e);
+	ft_div_mod(a, b, div, mod);
+	ft_putchar('0' + *div);
+	ft_putchar('0' + *mod);
 	return 0;
 }*/
